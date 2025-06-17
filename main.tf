@@ -6,5 +6,9 @@ provisioner "local-exec" {
     command = "bash ${path.root}/scripts/test.sh"
   }
 }
-
+resource "null_resource" "test-not-path"{
+provisioner "local-exec" {
+    command = "aws --version"
+  }
+}
 
